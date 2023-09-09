@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+:root {
+  font-family: Michroma, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background: #d9d9d9;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: #d9d9d9;
+}
+.greeting,
+.todo-title,
+.products-title,
+.accordion-item > h2 {
+  width: 548px;
+  height: 94px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #b19e9e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+.greeting-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.what-name {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+.what-name > div > input {
+  margin-bottom: 15px;
+}
+.profile-picture {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  box-shadow: inset -10px -10px 10px 20px white;
+}
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  height: fit-content;
+  max-width: 477.11px;
+  max-height: 214.885px;
+  border-radius: 10px;
+  background: rgba(217, 217, 217, 0.38);
+}
+.user-profile {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 540px;
+  border-radius: 10px;
+  background: #ffffffe0;
+  box-shadow: 0 0 5px 10px #ffffffe0;
+  gap: 32px;
+}
+.like-button {
+  border: 1px solid transparent;
+  height: 50px;
+  width: 200px;
+  font-size: 0.9em;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 10px;
+  background: #c7b1b1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#heart {
+  scale: 0.2;
+  width: 89px;
+  height: 85px;
+}
+#heartMouseDown {
+  scale: 0.4;
+  width: 89px;
+  height: 85px;
+}
+button:hover {
+  background: #998989;
+}
+button:active {
+  scale: 0.8;
+}
+input {
+  accent-color: purple;
+}
+.todo {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todo label:hover {
+  color: #998989;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.product-list {
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product {
+  width: 540px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: fit-content;
+  justify-content: center;
+}
+.product:hover {
+  background: #b19e9e5f;
+}
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  cursor: pointer;
+}
+.accordion-item h2:active {
+  scale: 0.8;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inline;
+}
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
