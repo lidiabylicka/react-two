@@ -1,13 +1,11 @@
 import { useState } from "react";
 
-const Comment = ({ username, commentText, addReply }) => {
+const Comment = ({ username, commentText, addReply, replies }) => {
   const [replyText, setReplyText] = useState("");
-  const replies = useState([""]);
   const handleReply = () => {
     if (replyText) {
       addReply(replyText);
       setReplyText("");
-      replies.push(replyText);
     }
   };
 
@@ -20,17 +18,21 @@ const Comment = ({ username, commentText, addReply }) => {
           Reply
         </button>
         <input
+          className="reply-input"
           type="text"
           value={replyText}
           placeholder="Type your reply and hit Reply button"
           onChange={(e) => setReplyText(e.target.value)}
-          // onKeyDown={(e) => {
-          //   if (e.key === "Enter") {
-          //     this.setState({ value: e.target.value });
-          //     console.log("enter comment");
-          //   }
-          // }}
         />
+        <div className="replies">
+          {" "}
+          Replies:
+          {replies.map((reply, index) => (
+            <div className="reply" key={index}>
+              &quot;{reply}&quot;
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

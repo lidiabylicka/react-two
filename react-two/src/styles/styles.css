@@ -237,6 +237,9 @@ input {
   background: rgba(255, 168, 168, 0.41);
   box-shadow: 0 0 5px 10px rgba(255, 168, 168, 0.41);
 }
+.comment-text {
+  width: 100%;
+}
 .comment-board {
   display: flex;
   flex-direction: column;
@@ -255,6 +258,7 @@ input {
   width: 540px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 23px;
   border-radius: 10px;
   gap: 15px;
@@ -282,6 +286,32 @@ input {
   color: inherit;
   height: 50px;
 }
+
+.reply-input {
+  width: 100%;
+  font-family: inherit;
+  border: inherit;
+  color: rgb(255, 120, 120);
+}
+
+.replies {
+  width: inherit;
+  color: #000;
+  font-size: large;
+
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reply {
+  text-align: center;
+  width: 80%;
+  background-color: rgba(47, 10, 10, 0.073);
+  border: rgba(234, 206, 206, 0.478) solid 2px;
+  border-radius: 10px;
+}
 /* Dark Theme */
 
 .theme-dark body {
@@ -306,7 +336,6 @@ input {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Toggle Button for Dark Theme */
 .theme-toggle button {
   border-radius: 8px;
   border: none;
