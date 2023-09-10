@@ -13,7 +13,7 @@ const Todo = ({ tasks }) => {
 
   return (
     <>
-      <form className="todo">
+      <form className="todo" id="todo">
         <div className="todo-title">
           <h2>Todo list:</h2>
         </div>

@@ -7,10 +7,10 @@ import LikeButton from "./components/LikeButton";
 import Todo from "./components/Todo";
 import ProductList from "./components/ProductList";
 import Accordion from "./components/Accordion";
-// import Person from "./components/Person";
+import CommentList from "./components/CommentList";
+import TabList from "./components/TabList";
 
 const App = () => {
-  //console.log("props", props);
   const [newName, setNewName] = useState("");
   const userProfile = {
     src: "https://i.ibb.co/ZhwYCHz/prof.png",
@@ -44,12 +44,13 @@ const App = () => {
   return (
     <>
       <Hello newName={newName} setNewName={setNewName} />
+      <TabList />
       <UserProfile profile={userProfile} />
-      <hr></hr>
       <LikeButton count={count} />
       <Todo tasks={tasks} />
       <ProductList products={products} />
       <Accordion />
+      <CommentList />
     </>
   );
 };

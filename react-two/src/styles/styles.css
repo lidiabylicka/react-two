@@ -23,10 +23,13 @@ body {
   background: #d9d9d9;
 }
 .greeting,
+.tab-list,
 .todo-title,
 .products-title,
-.accordion-item > h2 {
-  width: 548px;
+.accordion-item > h2,
+.comment-board > h2 {
+  /* width: 548px; */
+  width: 540px;
   height: 94px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -89,6 +92,7 @@ body {
   border: 1px solid transparent;
   height: 50px;
   width: 200px;
+  margin-top: 35px;
   font-size: 0.9em;
   font-weight: 500;
   font-family: inherit;
@@ -157,17 +161,98 @@ input {
   flex-direction: column;
   width: 540px;
   cursor: pointer;
+  overflow: hidden;
 }
 .accordion-item h2:active {
   scale: 0.8;
 }
 
 .hidden {
-  display: none;
+  max-height: 0;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  opacity: 0;
 }
 
 .visible {
-  display: inline;
+  opacity: 1;
+  max-height: 100%;
+  transition: opacity 0.3s ease-in-out;
+  overflow: visible;
+}
+
+.comment-list {
+  border-radius: 10px;
+  /* background: rgba(255, 168, 168, 0.41); */
+  padding: 23px;
+  background: rgba(255, 168, 168, 0.41);
+  box-shadow: 0 0 5px 10px rgba(255, 168, 168, 0.41);
+}
+.comment-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.comment-count {
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 35px;
+}
+.comment {
+  width: 540px;
+  display: flex;
+  flex-direction: row;
+  padding: 23px;
+  border-radius: 10px;
+  gap: 15px;
+  margin-bottom: 0.3em;
+  border: 1px solid #0000005b;
+  background: rgba(217, 217, 217, 0.3);
+  text-overflow: inherit;
+}
+.comment-username {
+  color: #000;
+  text-align: center;
+  font-family: Michroma;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  min-width: 190px;
+}
+.tab-list {
+  background-color: inherit;
+}
+.tab-list > .all-tabs {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8em;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  background-color: rgba(255, 168, 168, 0.41);
+  border: #f5e8e8 solid 1px;
+  border-radius: 10px;
+}
+.tab:hover {
+  background-color: rgba(255, 168, 168, 0.073);
+  border: #f5e8e87a solid 1px;
+  cursor: pointer;
+}
+.tab:active {
+  scale: 0.8;
 }
 /* @media (prefers-color-scheme: light) {
   :root {
