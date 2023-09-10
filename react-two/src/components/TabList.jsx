@@ -87,7 +87,6 @@ const TabList = () => {
         ))}
       </div>
       <div className="tab-content">{tabs[selectedTab].content}</div>
-      {/* </div> */}
     </>
   );
 };
