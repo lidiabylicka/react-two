@@ -44,6 +44,7 @@ const CommentList = () => {
     const updatedComments = [...comments];
     updatedComments[commentIndex].replies.push(replyText);
     setComments(updatedComments);
+    //work on saving comments and likes to localStorage (useEffect hook?)
   };
 
   return (
