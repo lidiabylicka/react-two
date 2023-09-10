@@ -1,8 +1,8 @@
 import ProfilePicture from "./ProfilePicture";
 import ProfileDetails from "./ProfileDetails";
 
-const UserProfile = ({ profile }) => {
-  const { src, name, email } = profile;
+const UserProfile = ({ profile = {} }) => {
+  const { src = "", name = "", email = "" } = profile;
   return (
     <div className="user-profile">
       <ProfilePicture src={src} className="profile-picture" />

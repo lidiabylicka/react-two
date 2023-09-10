@@ -1,10 +1,9 @@
-const Tab = ({ label, children }) => {
+const Tab = ({ label, isActive, onClick }) => {
+  const tabClassName = isActive ? "active-tab" : "inactive-tab";
+
   return (
-    <div className="tab">
-      <div className="tab-label">
-        {label}
-        <div className="tab-children">{children}</div>
-      </div>
+    <div className={`tab ${tabClassName}`} onClick={onClick}>
+      <div className="tab-label">{label}</div>
     </div>
   );
 };

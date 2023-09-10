@@ -7,24 +7,59 @@ import ProductList from "./ProductList";
 import CommentList from "./CommentList";
 import Accordion from "./Accordion";
 
+const userProfile = {
+  src: "https://i.ibb.co/ZhwYCHz/prof.png",
+  name: "Lidia",
+  email: "lidia@email.com",
+};
+const count = 0;
+
+const tasks = [
+  "go to the gym",
+  "do React homework",
+  "make dinner",
+  "watch a movie",
+];
+
+const products = [
+  {
+    name: "Lawn mower 1.0",
+    price: 345,
+    description: "Cuts grass",
+  },
+  {
+    name: "Lawn mower 2.0",
+    price: 545,
+    description: "Cuts grass better",
+  },
+  {
+    name: "Lawn mower 3.0",
+    price: 999,
+    description: "The best at cutting grass",
+  },
+];
+
+//Component:
+
 const TabList = () => {
   const [selectedTab, setTab] = useState(0);
+
   const tabs = [
     {
       label: "Profile",
-      content: <UserProfile />,
+      content: <UserProfile profile={userProfile} />,
     },
     {
       label: "Likes Count",
-      content: <LikeButton />,
+      content: <LikeButton count={count} />,
     },
     {
       label: "Todo List",
-      content: <Todo />,
+      content: <Todo tasks={tasks} />,
     },
     {
       label: "Products List",
-      content: <ProductList />,
+      content: <ProductList products={products} />,
     },
     {
       label: "Hidden Content",
@@ -35,22 +70,24 @@ const TabList = () => {
       content: <CommentList />,
     },
   ];
-
+  const handleTabClick = (index) => {
+    setTab(index);
+  };
   return (
     <>
-      <div className="tab-list">
-        <div className="all-tabs">
-          {tabs.map((tab, index) => (
-            <Tab
-              key={index}
-              label={tab.label}
-              selected={selectedTab === index}
-              onClick={() => setTab(index)}
-            />
-          ))}
-        </div>
-        {/* <div className="tab-content">{tabs[selectedTab].content}</div> */}
+      {/* <div className="tab-list"> */}
+      <div className="all-tabs">
+        {tabs.map((tab, index) => (
+          <Tab
+            key={index}
+            label={tab.label}
+            isActive={selectedTab === index}
+            onClick={() => handleTabClick(index)}
+          />
+        ))}
       </div>
+      <div className="tab-content">{tabs[selectedTab].content}</div>
+      {/* </div> */}
     </>
   );
 };
