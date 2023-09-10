@@ -262,6 +262,7 @@ input {
   border: 1px solid #0000005b;
   background: rgba(217, 217, 217, 0.3);
   text-overflow: inherit;
+  justify-content: space-between;
 }
 .comment-username {
   color: #000;
@@ -274,7 +275,13 @@ input {
   text-decoration-line: underline;
   min-width: 190px;
 }
-
+.reply-button {
+  font-family: inherit;
+  border-radius: 8px;
+  background-color: inherit;
+  color: inherit;
+  height: 50px;
+}
 /* Dark Theme */
 
 .theme-dark body {
@@ -354,6 +361,6 @@ input {
   color: rgba(188, 172, 172, 0.873);
   text-overflow: inherit;
 }
-.comment-username {
+.theme-dark .comment-username {
   color: #ffffff5b;
 }

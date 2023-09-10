@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Comment from "./Comment";
 
 const arrayOfComments = [
@@ -30,6 +31,9 @@ const arrayOfComments = [
 
 const CommentList = () => {
   const commentCount = arrayOfComments.length;
+  const [comments, setComments] = useState(arrayOfComments);
+  console.log([comments, setComments]);
+
   return (
     <>
       <div className="comment-board">
@@ -42,6 +46,7 @@ const CommentList = () => {
                 key={index}
                 username={comment.username}
                 commentText={comment.commentText}
+                replies={comment.replies}
               />
             ))}
           </div>
