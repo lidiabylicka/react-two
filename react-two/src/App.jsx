@@ -1,14 +1,16 @@
 import "./styles/styles.css";
 import "./components/Hello.jsx";
+import ThemeProvider from "./components/ThemeProvider";
 import { useState } from "react";
 import Hello from "./components/Hello.jsx";
+import TabList from "./components/TabList";
+
 // import UserProfile from "./components/UserProfile";
 // import LikeButton from "./components/LikeButton";
 // import Todo from "./components/Todo";
 // import ProductList from "./components/ProductList";
 // import Accordion from "./components/Accordion";
 // import CommentList from "./components/CommentList";
-import TabList from "./components/TabList";
 
 // const userProfile = {
 //   src: "https://i.ibb.co/ZhwYCHz/prof.png",

@@ -17,8 +17,7 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-
-  min-height: 100vh;
+  min-height: 120vh;
   box-sizing: border-box;
   background: #d9d9d9;
 }
@@ -66,6 +65,8 @@ body {
   color: #333;
 }
 .tab-content {
+  display: flex;
+  justify-content: center;
   position: relative;
 }
 
@@ -272,4 +273,87 @@ input {
   line-height: normal;
   text-decoration-line: underline;
   min-width: 190px;
+}
+
+/* Dark Theme */
+
+.theme-dark body {
+  background: #333;
+}
+.theme-dark {
+  background: #333;
+  color: #fff;
+}
+
+.theme-dark #root {
+  background: #333;
+}
+
+.theme-dark .tab {
+  color: grey;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: #000 solid 1px;
+}
+
+.theme-dark .tab:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle Button for Dark Theme */
+.theme-toggle button {
+  border-radius: 8px;
+  border: none;
+  font: inherit;
+  background: #5c4e4e5d;
+  color: #ffffff62;
+}
+
+.theme-toggle button:hover {
+  background: #ccc;
+}
+
+.theme-dark .greeting,
+.tab-list,
+.todo-title,
+.products-title,
+.accordion-item > h2,
+.comment-board > h2 {
+  background: #5c4e4e5d;
+}
+
+.theme-dark .profile-details {
+  background: rgba(67, 63, 63, 0.829);
+  color: #000;
+}
+.theme-dark .user-profile {
+  background: #111010e0;
+  box-shadow: 0 0 5px 10px #111010e0;
+  gap: 32px;
+}
+
+.theme-dark .profile-picture {
+  box-shadow: inset -10px -10px 10px 20px rgb(0, 0, 0);
+}
+.theme-dark .like-button {
+  background: #383030;
+  color: #998989;
+}
+.theme-dark .like-button:hover {
+  background: #564b4b;
+  color: #716666;
+}
+
+.theme-dark .comment-list {
+  background: rgba(255, 168, 168, 0.089);
+  box-shadow: 0 0 5px 10px rgba(255, 168, 168, 0.089);
+}
+
+.theme-dark .comment {
+  border: 1px solid #0000005b;
+  background: rgba(54, 38, 38, 0.284);
+  color: rgba(188, 172, 172, 0.873);
+  text-overflow: inherit;
+}
+.comment-username {
+  color: #ffffff5b;
 }
