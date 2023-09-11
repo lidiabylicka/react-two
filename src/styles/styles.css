@@ -91,6 +91,7 @@ body {
 .greeting-card {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   position: relative;
 }
@@ -232,10 +233,10 @@ input {
 
 .comment-list {
   border-radius: 10px;
-  /* background: rgba(255, 168, 168, 0.41); */
   padding: 23px;
   background: rgba(255, 168, 168, 0.41);
   box-shadow: 0 0 5px 10px rgba(255, 168, 168, 0.41);
+  width: 100%;
 }
 .comment-text {
   width: 100%;
@@ -392,4 +393,8 @@ input {
 }
 .theme-dark .comment-username {
   color: #ffffff5b;
+}
+
+.theme-dark .active-tab {
+  border: 3px solid rgba(203, 186, 186, 0.466);
 }
